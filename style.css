@@ -1,0 +1,101 @@
+:root {
+				--cor-borda: #ddd;
+				--cor-verde: #00a50e;
+				--cor-hover: #e3e9e4;
+				--cor-texto: #333;
+				--cor-marcador: #7a92a3;
+			}
+
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 50px 20px;
+				background-color: #f4f4f9;
+			}
+
+			.secao-container {
+				width: 100%;
+				max-width: 500px;
+				margin-bottom: 40px;
+			}
+
+			h2 {
+				color: var(--cor-texto);
+				font-weight: 400;
+				margin-bottom: 20px;
+				display: flex;
+				align-items: center;
+				font-size: 1.2rem;
+			}
+
+			h2::before {
+				content: "•";
+				color: var(--cor-marcador);
+				font-size: 2rem;
+				margin-right: 10px;
+				line-height: 0;
+			}
+
+			.pagination-nav {
+				user-select: none;
+				background: #fff;
+				padding: 40px;
+				border: 1px solid #eee;
+				display: flex;
+				justify-content: center;
+			}
+
+			.pagination-list {
+				display: flex;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				background: #fff;
+				border-radius: 4px;
+				overflow: hidden;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+			}
+
+			.pagination-list li {
+				border: 1px solid var(--cor-borda);
+			}
+
+			.pagination-list li + li {
+				border-left: none;
+			}
+
+			.pagination-list li a {
+				display: block;
+				padding: 12px 18px;
+				text-decoration: none;
+				color: var(--cor-verde);
+				font-weight: 500;
+				transition: all 0.2s ease;
+			}
+
+			.normal .pagination-list li a:hover {
+				background-color: var(--cor-hover);
+				color: var(--cor-verde);
+			}
+
+			.com-hover .pagination-list li a:hover {
+				background-color: transparent;
+				cursor: default;
+			}
+
+			.com-hover .pagination-list li:nth-child(3) a {
+				background-color: var(--cor-hover);
+				color: #6c757d;
+			}
+
+			.pagination-list li:first-child {
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+			}
+
+			.pagination-list li:last-child {
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
